@@ -1,4 +1,5 @@
-# sms_chemical_module
+# sms_chemical_module 
+# Django Rest Api with Postgres Database
 
 INTRODUCTION
 
