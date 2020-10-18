@@ -19,9 +19,9 @@ from sms_test import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api_chemical_details/<int:pk>/',views.chemicaldetails.as_view()),
+    path('get_commodity/<int:pk>/',views.chemicaldetails.as_view()),
     path('all_chemical_elements',views.chemicalelementdetails.as_view()),
     # path('UserSerializertdetails',views.UserSerializertdetails.as_view()),
-    path('ChemicalConcentration',views.ChemicalConcentration.as_view()),
+    # path('ChemicalConcentration',views.ChemicalConcentration.as_view()),
     path('ChemicalConcentration/<int:pk>',views.ChemicalConcentration.as_view()),
 ]
