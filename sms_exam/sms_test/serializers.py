@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from sms_test.models import ChemicalElement, Commodity, Dob, User, EC_MAP
+from sms_test.models import ChemicalElement, Commodity, EC_MAP
 
 class ChemicalElementSerializer(serializers.ModelSerializer):
     
@@ -28,14 +28,3 @@ class ChemicalConcentrationSerializer(serializers.ModelSerializer):
         model = EC_MAP
         fields = ['commodity_id','element_id', 'percentage']
 
-class DobSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Dob 
-        fields = ('day', 'month', 'year')
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    dob = DobSerializer(many=False, read_only=True);
-
-    class Meta:
-        model = User
-        fields = ('name', 'age', 'dob');
