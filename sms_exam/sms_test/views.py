@@ -73,9 +73,6 @@ class ChemicalConcentration(APIView):
 				unknown_element = i.element_id
 			else:
 				ch_percentage += i.percentage
-
-		print(ch_percentage)
-
 		unknown_percent = 100 - ch_percentage
 		if unknown_element:
 			ec_map_id = models.EC_MAP.objects.filter(element_id=unknown_id)
@@ -83,17 +80,17 @@ class ChemicalConcentration(APIView):
 			if serializer.is_valid():
 				serializer.save()
 				return Response(serializer.data)
-		else:
+		# else:
 
-			ec_map_data = {
-							'commodity_id': id,
-							'element_id' : unknown_id.id,
-							'percentage': unknown_percent
-			}
-			serializer = ChemicalConcentrationSerializer(data=ec_map_data)
-			if serializer.is_valid():
-				serializer.save()
-				return True
+		# 	ec_map_data = {
+		# 					'commodity_id': id,
+		# 					'element_id' : unknown_id.id,
+		# 					'percentage': unknown_percent
+		# 	}
+		# 	serializer = ChemicalConcentrationSerializer(data=ec_map_data)
+		# 	if serializer.is_valid():
+		# 		serializer.save()
+		# 		return True
 
 	def get(self, request, pk):
 		print(pk)
