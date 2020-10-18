@@ -62,7 +62,7 @@ https://github.com/pettarin/python-on-windows/blob/master/README.md
               DATABASES = {
                        'default': {
                            'ENGINE': 'django.db.backends.postgresql',
-                           'NAME': 'sms_db_1', on step we create the sms_db_1 , so dont touch Name section
+                           'NAME': 'sms_db_1', on step 1 we create the sms_db_1 , so dont touch Name section
                            'USER': 'postgres',
                            'PASSWORD': 'your password',  please add the password remember the password on step 1, 
                            'HOST': '127.0.0.1',
