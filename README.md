@@ -1,7 +1,5 @@
 # sms_chemical_module
 
-# sms_chemical_module
-
 INTRODUCTION
 
 The metallics optimizer calculates the cheapest charge mix for an electric arc furnace (EAF)
