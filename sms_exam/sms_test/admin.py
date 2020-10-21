@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ChemicalElement, Commodity, User, Dob, EC_MAP
+from .models import ChemicalElement, Commodity, EC_MAP
 
 
 # Register your models here.
